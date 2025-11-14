@@ -1,0 +1,26 @@
+@inherits UmbracoViewPage<BlockListItem>
+@using Umbraco.Cms.Core.Models.Blocks;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var content = (ContentModels.SuccessSection)Model.Content;
+}
+
+<section class="success-section bg-[#5C6961] py-20 text-center">
+    <div class="container mx-auto max-w-6xl">
+
+        <div class="success-header">
+            <span class="success-label">@content.SuccessLabel</span>
+            <h2 class="success-title text-white">@content.SeccessTitle</h2>
+        </div>
+
+        <div class="success-items">
+            @await Html.GetBlockListHtmlAsync(content.SuccessItems)
+        </div>
+
+        <div class="success-image">
+            <img src="@content.SuccessVideoImage?.Url()" alt="Team working together">
+        </div>
+
+    </div>
+</section>

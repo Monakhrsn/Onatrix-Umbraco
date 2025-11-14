@@ -68,3 +68,39 @@ img {
 .field-validation-error {
     @apply mt-1 block text-sm text-red-600;
 }
+
+.success-header {
+    @apply 
+}
+
+.success-items {
+    @apply pb-36;
+}
+
+/* Chatgpt suggested */
+.success-items > .umb-block-list {
+   @apply flex justify-center gap-20;
+}
+
+.success-items .stat-item {
+    @apply flex flex-col items-center text-center;
+}
+
+.success-items .stat-text {
+    @apply text-sm text-white max-w-[240px] leading-relaxed;
+}
+
+.success-section {
+    @apply relative;
+}
+
+.success-section .success-image {
+    @apply mt-[-60px] mb-10 flex justify-center;
+}
+
+.success-section .success-image {
+    @apply absolute left-1/2 transform -translate-x-1/2;
+    bottom: -220px;
+}
+
+

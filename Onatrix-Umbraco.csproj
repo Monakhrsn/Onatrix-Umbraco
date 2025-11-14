@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="umbraco\models\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

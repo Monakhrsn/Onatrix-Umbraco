@@ -1,0 +1,13 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessItem)Model.Content;
+}
+
+<div class="stat-item">
+    <span class="stat-number">@content.SuccessItemNumber</span>
+    <span class="stat-text text-[18px] text-[#fff] max-w-[240px] leading-relaxed">
+        @content.SeccessItemDescription
+    </span>
+</div>
+
