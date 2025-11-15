@@ -1,0 +1,12 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var content = (ContentModels.PartnersSection)Model.Content;
+}
+
+<section class="partners-section">
+    <div class="max-w-6xl mx-auto flex justify-center">
+        <img src="@content.PartnersSectionImage.Url()" alt="Partners logoes">
+    </div>
+</section>
