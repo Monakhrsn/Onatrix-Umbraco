@@ -1,0 +1,29 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var content = (ContentModels.HelpSection)Model.Content;
+    var bgImage = content.HelpSectionBgImage?.Url() ?? "";
+}
+
+<section class="help-section has-help-bg">
+    <div class="help-info-wrapper has-help-bg"
+         style="background-image: url('@bgImage');">
+
+    <h3 class="text-xl font-bold mb-2">
+            @content.HelpSectionTitle
+        </h3>
+        <p>
+            @content.HelpSectionDescription
+        </p>
+        <div class="relative">
+            <input type="email"
+                   placeholder="E-mail address"
+                   class="w-full p-3 pr-12 rounded bg-white/20 text-white placeholder-white/70 focus:outline-none"/>
+
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 ">
+                <i class="fa-solid fa-envelope text-lg mt-1 text-primary"></i>
+            </span>
+        </div>
+    </div>
+</section>
